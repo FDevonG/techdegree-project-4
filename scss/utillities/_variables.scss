@@ -1,0 +1,99 @@
+//Layout
+$max-width            : 1400px;
+$container--width     : 85%;
+
+//Grid Columns
+$g-col-width    : 75px;
+$g-gutter-width : 10px;
+$g-col-count    : 12;
+$g--count-max-w : 1400px;
+
+//Font-stacks
+$font-url--google : 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
+$font-family--primary : 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', 'Sans Serif';
+$font-family--secondary : 'Helvetica Neue', 'Helvetica', 'Arial', 'Sans Serif';
+
+//Font-Weights
+$font-weight--thin         : 100;
+$font-weight--light        : 300;
+$font-weight--medium       : 400;
+$font-weight--bold         : 700;
+$font-weight--ultra-bold   : 900;
+
+//Typography
+$base__font-size   : 16px;
+$base__line-height : 24px;
+
+
+//Descriptive-Base-Colors
+$white : #fff;
+$black : #0b0b0b;
+$grey  : #797e83;
+
+$viking          : #58e1c1; //Highlight Color
+$malibu          : #51ddfc; //Default Color
+$emerald         : #63cc82; //Success Color
+$sunglo          : #e4757a; //Error Color
+$coral           : #fd7856; //Warning Color
+$purple-majesty  : #927bc1; //Info Color
+$riptide         : #80e8d1;
+$shakespeare     : #3fabca;
+$anakiwa         : #7ee6fd;
+$french-lilac    : #deb2ee;
+$vista-blue      : #88d9a0;
+$sea-pink        : #ec9fa3;
+$vivid-tangerine : #fd9f85;
+
+//Color-Usage
+$primary-color : $viking;
+$secondary--color : $malibu;
+
+$ui-colors  : (
+	default : $malibu,
+	success : $emerald,
+	error   : $sunglo,
+	warning : $coral,
+	info    : $purple-majesty,
+);
+
+$grid-colors : (
+	3  : $french-lilac,
+	4  : $anakiwa,
+	5  : $vista-blue,
+	6  : $shakespeare,
+	7  : $sea-pink,
+	8  : $vivid-tangerine,
+	12 : $riptide,
+);
+
+//Color Palettes
+$palettes : (
+	
+	black : (
+		light : lighten($black, 10%),
+		base  : $black,
+		dark  : darken($black, 10%),
+	),
+	
+	grey: (
+		xx-light : lighten($grey, 43%),
+		x-light  : lighten($grey, 35%),
+		light    : lighten($grey, 12%),
+		base     : $grey,
+		dark     : darken($grey, 8%),
+		x-dark   : darken($grey, 16%),
+	),
+	
+);
+
+//Border-Radius
+$br-default : 0.4em;
+$br-round   : 50%;
+
+//Transitions
+$transition-duration : 0.4s;
+
+//Breakpoints
+$breakpoint : 1400px;
+
+

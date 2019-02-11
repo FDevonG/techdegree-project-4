@@ -1,0 +1,31 @@
+//Checks to make sure the font url variable exists and imports it
+@if variable-exists (font-url--google) {
+	@import url($font-url--google);
+}
+
+.container {
+	font-size: em(16px);
+	font-family: $font-family--primary;
+	color: palette(grey, light);
+}
+
+.headline {
+	
+	@include m(primary) {
+		@extend %hdln-prim;
+	}
+	
+	@include m(secondary) {
+		@extend %hdln-sec;
+	}
+	
+}
+
+
+.link {
+	@extend %link;
+}
+
+.blockquote {
+	@extend %blockquote;
+}

@@ -1,0 +1,15 @@
+//This function converts units to em
+@function em ($target, $context : $base__font-size) {
+	@return ($target / $context) * 1em;
+}
+
+//Call The Color Palette and retrieve colors from it
+@function palette ($palette, $base : 'base') {
+	@return map-get(map-get($palettes, $palette), $base);
+}
+
+//Set the "Context" width for the grid
+@function g-context($g-col-width, $g-col-count ,$g-gutter-width) {
+    $g-context: ($g-col-width * $g-col-count) + ($g-gutter-width * ($g-col-count - 1));
+    @return $g-context;
+}

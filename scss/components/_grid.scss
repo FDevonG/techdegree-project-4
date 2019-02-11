@@ -1,0 +1,61 @@
+.container {
+	@include flexy($dir:column);
+	@extend %centered;
+	width: $container--width;
+	max-width: $max-width;
+	
+	//Make Nested grids 100%
+	[class*="grid__col--"] > & {
+		width: 100%;
+	}
+	
+}
+
+.grid__col {
+	@include grid-colors($grid-colors);
+}
+
+.grid__row {
+	@include mq() {
+		@include flexy();
+	}
+	@extend %clearfix;
+}
+
+.grid__col--3:not(.theme__colors),
+.grid__col--6:not(.theme__colors) {
+	text-align: center;
+}
+
+@for $i from 1 through $g-col-count {
+	
+	$context: g-context($g-col-width, $g-col-count, $g-gutter-width)  !global;
+	$target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+	
+	@include mq() {
+		//Create Modifier Classes
+		.grid__col--#{$i} {
+			@include flexy($just:space-evenly);
+			width: percentage($target / $context);
+		}
+		
+	}
+	
+}
+
+////Column Styles
+[class^="grid__col--"] {
+	
+	@extend %col;
+	@extend %centered;
+	
+	@include mq() {
+		@include doubly(percentage($g-gutter-width / $context));
+		float: left;
+		min-height: 1px;
+		&:last-of-type {
+			float:right;
+		}
+	}
+	
+}

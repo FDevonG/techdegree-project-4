@@ -1,0 +1,28 @@
+.form {
+	@extend %align-text-center;
+	@include e(label) {
+		@include m(hidden) {
+			display: none;
+		}
+	}
+	
+	@include e(input) {
+		width:100%;
+		font-size: em(14px);
+		border:none;
+		border-bottom: em(5px, 14px) solid $primary-color;
+		height: em(40px, 14px);
+		margin: em(10px, 14px) 0;
+		&::placeholder {
+			padding-left: em(10px, 14px);
+			font-weight: $font-weight--bold;
+		}
+		&:active,
+		&:focus {
+			outline:none;
+		}
+		
+	}
+	
+}
+    

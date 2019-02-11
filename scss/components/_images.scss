@@ -1,0 +1,14 @@
+.img {
+	@include m(logo) {
+		@extend %logo;
+		@extend %img;
+	}
+	@include m(avatar) {
+		@extend %avatar;
+		@extend %img;
+	}
+	@include m(frame) {
+		@extend %frame;
+		@extend %img;
+	}
+}

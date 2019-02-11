@@ -1,0 +1,53 @@
+//LAYOUT MIXINS
+@mixin flexy ($dis:flex, $dir:null, $wrap:null, $just:null) {
+	display:$dis;
+	flex-direction: $dir;
+	flex-wrap: $wrap;
+	justify-content: $just;
+}
+
+//Color Themes
+@mixin bg-colors ($map) {
+	@each $theme, $color in $map { 
+		&--#{$theme} {
+			background-color: $color;
+		}
+	}
+}
+
+//Grid Colors {
+@mixin grid-colors ($map) {
+	@each $theme, $color in $map { 
+		&--#{$theme}.theme__colors {
+			background-color: $color;
+		}
+	}
+}
+
+//BEM Selectors
+@mixin e($element) {  //Element Selector
+	&__#{$element} {
+		@content;
+	}
+}
+
+@mixin m($modifier) {        //Modifier selector
+	&--#{$modifier} {
+		@content;
+	}
+}
+
+//Adjacent sibling margins
+@mixin doubly($margin : 1em) {
+	& + & {
+		margin-left: $margin;
+		@content;
+	}
+}
+
+//Media Querie
+@mixin mq () {
+	@media screen and (min-width:$breakpoint) {
+		@content;
+	}
+}

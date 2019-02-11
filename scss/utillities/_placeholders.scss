@@ -1,0 +1,126 @@
+//Headlines
+%hdln-prim {
+	font-size: em(24px);
+	font-weight : $font-weight--bold;
+	color: $primary-color;
+	font-family: $font-family--secondary;
+	padding-left: em(30px, 24px);
+}
+
+%hdln-sec {
+	font-size: em(18px);
+	font-weight: $font-weight--light;
+	color: palette(grey, dark);
+}
+
+//Buttons
+%btn {
+	display:block;
+	width:100%;
+	font-size: em(14px);
+	padding: em(15px, 14px);
+	border: 0;
+	border-radius: $br-default;
+	color:$white;
+	text-transform: uppercase;
+	margin: em(15px, 14px) 0;
+	transition: opacity $transition-duration;
+	
+	&:hover,
+	&:focus {
+		opacity : 0.6;
+	}
+	
+	&:focus,
+	&:active {
+		outline: none;
+	}
+	
+	&:active {
+		color: palette(black, dark);
+	}
+	@include mq() {
+		flex:0 0 15%;
+	}
+}
+
+
+//Nav Items
+%nav-item-link {
+	font-size: em(18px);
+	font-weight: $font-weight--light;
+	display: block;
+	padding: em(8px, 18px);
+	width:100%;
+	border-radius: $br-default;
+}
+
+%nav-item-hover {
+	color: $white;
+	background-color: $primary-color;
+}
+
+//Links
+%link {
+	color: $secondary--color;
+}
+
+//Blockquote
+%blockquote {
+	font-size:em(18px);
+	border-left: em(5px, 18px) solid $primary-color;
+	padding-left:em(20px, 18px);
+	font-weight: $font-weight--light;
+	border-radius: $br-default;
+	font-style:italic;
+}
+
+//Centres Elements
+%centered {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+//Text-Center
+%align-text-center {
+	text-align: center;
+}
+
+//Images
+%img {
+	max-width:100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+%logo {
+	margin-top: em(30px);
+	margin-bottom: em(30px);
+}
+
+%frame {
+	padding: em(8px);
+	border: em(1px) solid palette(grey, light);
+}
+
+%avatar {
+	border-radius: $br-round;
+	margin-top: em(30px);
+	margin-bottom: em(30px);
+}
+
+//Column
+%col {
+	margin-top: em(12px);
+	margin-bottom: em(12px);
+	padding: em(10px) 0 em(10px) em(10px);
+	border-radius: $br-default;
+}
+
+//Clearfix
+%clearfix {
+	content: '';
+	clear: both;
+	display: table;
+}
